@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:BlackJackApplication.CardDisplay"
+             xmlns:wpf="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
@@ -18,18 +19,42 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <TextBlock x:Name="txtPlayerName" Grid.Column="0" Grid.Row="0" FontSize="16" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left"></TextBlock>
-        
+
         <!--<TextBlock x:Name="lblPlayerScore" Text="Score: " Grid.Column="2" Grid.Row="0" FontSize="12" VerticalAlignment="Top" HorizontalAlignment="Right"></TextBlock>-->
         <TextBlock x:Name="txtPlayerScore" Grid.Column="2" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="16" FontWeight="SemiBold"></TextBlock>
-        <Button x:Name="btnHitPlayer" Content="Hit Me!" Grid.Column="2" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="100" Click="btnHitPlayer_Click" ></Button>
-        <Button x:Name="btnStayPlayer" Content="Stay!" Grid.Column="2" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="100" Click="btnStayPlayer_Click"></Button>
+        <Button x:Name="btnHitPlayer" Grid.Column="2" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="120" MinHeight="60" Click="btnHitPlayer_Click" >
+            <Button.LayoutTransform>
+                <TransformGroup>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <TranslateTransform />
+                </TransformGroup>
+            </Button.LayoutTransform>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Margin="10,13,0,0" FontSize="20" Text="Hit Me" TextAlignment="Center" />
+                <wpf:PackIcon Width="50" Height="50" Kind="CardsOutline" />
+            </StackPanel>
+        </Button>
+        <Button x:Name="btnStayPlayer" Grid.Column="2" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="120" Height="60" Click="btnStayPlayer_Click">
+            <Button.LayoutTransform>
+                <TransformGroup>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <TranslateTransform />
+                </TransformGroup>
+            </Button.LayoutTransform>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Margin="10,13,0,0" FontSize="20" Text="Stay" TextAlignment="Center" />
+                <wpf:PackIcon Width="50" Height="50" Kind="Hand" />
+            </StackPanel>
+        </Button>
 
-        <DataGrid Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="2" ItemsSource="{Binding}" x:Name="CardDataGrid" AutoGenerateColumns="False"> 
+        <DataGrid Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="2" ItemsSource="{Binding}" x:Name="CardDataGrid" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Value" Binding="{Binding CardValue}" Width="1*" FontSize="16" FontWeight="SemiBold"/>
-                <DataGridTextColumn Header="Suit" Binding="{Binding Suit}" Width="1*" FontSize="16" FontWeight="SemiBold"/>
+                <DataGridTextColumn Header="Suit" Binding="{Binding Suit}" Width="1*" FontSize="16" FontWeight="SemiBold"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
-        
+
     </Grid>
 </UserControl>

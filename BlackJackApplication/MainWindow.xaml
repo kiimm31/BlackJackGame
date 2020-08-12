@@ -23,8 +23,18 @@
         <TextBox x:Name="txtPlayerName" Grid.Row="0" Grid.Column="1" Width="Auto" MinWidth="200" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="16" FontWeight="SemiBold"></TextBox>
         <TextBlock Text="Number Of Deck:  " Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="16" FontWeight="SemiBold"></TextBlock>
         <TextBox x:Name="txtNumberOfDeck" Grid.Row="1" Grid.Column="1" Width="Auto" MinWidth="200"  VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="16" FontWeight="SemiBold"></TextBox>
-        <Button x:Name="btnStartGame" Click="btnStartGame_Click" Content="Start Game" Grid.Column="1" Grid.Row="2" >
-
+        <Button x:Name="btnStartGame" Click="btnStartGame_Click" Grid.Column="1" Grid.Row="2" MinHeight="60" >
+            <Button.LayoutTransform>
+                <TransformGroup>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <TranslateTransform />
+                </TransformGroup>
+            </Button.LayoutTransform>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Margin="10,13,0,0" FontSize="20" Text="Start Game" TextAlignment="Center" />
+                <wpf:PackIcon Width="50" Height="50" Kind="Cards" />
+            </StackPanel>
         </Button>
     </Grid>
 </Window>
