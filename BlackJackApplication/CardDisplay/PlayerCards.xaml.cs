@@ -52,7 +52,10 @@ namespace BlackJackApplication.CardDisplay
             CardDataGrid.DataContext = Cards;
 
             btnHitPlayer.IsEnabled = canStartGame;
+            btnHitPlayer.ToolTip = _player.TotalCardsValue;
+
             btnStayPlayer.IsEnabled = canStartGame;
+            btnStayPlayer.ToolTip = _player.TotalCardsValue;
         }
 
         private void btnHitPlayer_Click(object sender, RoutedEventArgs e)

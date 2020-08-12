@@ -8,26 +8,26 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <TextBlock x:Name="txtPlayerName" Grid.Column="0" Grid.Row="0" FontSize="12" VerticalAlignment="Top" HorizontalAlignment="Left"></TextBlock>
+        <TextBlock x:Name="txtPlayerName" Grid.Column="0" Grid.Row="0" FontSize="16" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left"></TextBlock>
         
         <!--<TextBlock x:Name="lblPlayerScore" Text="Score: " Grid.Column="2" Grid.Row="0" FontSize="12" VerticalAlignment="Top" HorizontalAlignment="Right"></TextBlock>-->
-        <TextBlock x:Name="txtPlayerScore" Grid.Column="2" Grid.Row="0" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Right"></TextBlock>
-        <Button x:Name="btnHitPlayer" Content="Hit Me!" Grid.Column="2" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="100" Click="btnHitPlayer_Click"></Button>
+        <TextBlock x:Name="txtPlayerScore" Grid.Column="2" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="16" FontWeight="SemiBold"></TextBlock>
+        <Button x:Name="btnHitPlayer" Content="Hit Me!" Grid.Column="2" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="100" Click="btnHitPlayer_Click" ></Button>
         <Button x:Name="btnStayPlayer" Content="Stay!" Grid.Column="2" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="100" Click="btnStayPlayer_Click"></Button>
 
         <DataGrid Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="2" ItemsSource="{Binding}" x:Name="CardDataGrid" AutoGenerateColumns="False"> 
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Value" Binding="{Binding CardValue}" Width="1*"/>
-                <DataGridTextColumn Header="Suit" Binding="{Binding Suit}" Width="1*"/>
+                <DataGridTextColumn Header="Value" Binding="{Binding CardValue}" Width="1*" FontSize="16" FontWeight="SemiBold"/>
+                <DataGridTextColumn Header="Suit" Binding="{Binding Suit}" Width="1*" FontSize="16" FontWeight="SemiBold"/>
             </DataGrid.Columns>
         </DataGrid>
         

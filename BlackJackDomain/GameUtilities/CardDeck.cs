@@ -14,7 +14,7 @@ namespace BlackJackDomain.GameUtilities
         {
             get
             {
-                return Cards.Count(x => x.HasDealt == true) < 15;
+                return Cards.Count(x => x.HasDealt == false) < 15;
             }
         }
         protected CardDeck()
@@ -36,7 +36,6 @@ namespace BlackJackDomain.GameUtilities
                 {
                     foreach (CardValue cardValue in Enum.GetValues(typeof(CardValue)))
                     {
-
                         foreach (Suit suit in Enum.GetValues(typeof(Suit)))
                         {
                             Cards.Add(new Card() { CardValue = (CardValue)cardValue, Suit = (Suit)suit, IsHidden = true, HasDealt = false });

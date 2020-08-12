@@ -12,8 +12,8 @@
             <ColumnDefinition x:Name="PlayerCol" Width="Auto"></ColumnDefinition>
         </Grid.ColumnDefinitions>-->
         <Grid.RowDefinitions>
-            <RowDefinition x:Name="DealerRow" Height="Auto"></RowDefinition>
-            <RowDefinition x:Name="PlayerRow" Height="Auto"></RowDefinition>
+            <RowDefinition x:Name="DealerRow" Height="1*"></RowDefinition>
+            <RowDefinition x:Name="PlayerRow" Height="1*"></RowDefinition>
         </Grid.RowDefinitions>
 
         

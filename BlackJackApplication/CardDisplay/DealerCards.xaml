@@ -14,11 +14,11 @@
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
             </Grid.RowDefinitions>
-            <TextBlock x:Name="txtDealerName" Text="DEALER" Grid.Column="0" Grid.Row="0" FontSize="12" VerticalAlignment="Top" HorizontalAlignment="Left"></TextBlock>
+            <TextBlock x:Name="txtDealerName" Text="DEALER" Grid.Column="0" Grid.Row="0"  VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="16" FontWeight="SemiBold"></TextBlock>
 
             <!--<TextBlock x:Name="lblPlayerScore" Text="Score: " Grid.Column="2" Grid.Row="0" FontSize="12" VerticalAlignment="Top" HorizontalAlignment="Right"></TextBlock>
             <TextBlock x:Name="txtPlayerScore" Grid.Column="2" Grid.Row="0" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Right"></TextBlock>
@@ -26,13 +26,13 @@
             <Button x:Name="btnStayPlayer" Content="Stay!" Grid.Column="2" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="100" Click="btnStayPlayer_Click"></Button>-->
 
             <Button x:Name="btnNewGame" Content="New Game" Grid.Column="2" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="100" Click="btnNewGame_Click"></Button>
-            
-            <TextBlock x:Name="txtResult" Grid.Column="2" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+
+            <TextBlock x:Name="txtResult" Grid.Column="2" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16" FontWeight="SemiBold"></TextBlock>
 
             <DataGrid Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="2" ItemsSource="{Binding}" x:Name="CardDataGrid" AutoGenerateColumns="False">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Value" Binding="{Binding CardValue}" Width="1*"/>
-                    <DataGridTextColumn Header="Suit" Binding="{Binding Suit}" Width="1*"/>
+                    <DataGridTextColumn Header="Value" Binding="{Binding CardValue}" Width="1*" FontSize="16" FontWeight="SemiBold"/>
+                    <DataGridTextColumn Header="Suit" Binding="{Binding Suit}" Width="1*" FontSize="16" FontWeight="SemiBold"/>
                 </DataGrid.Columns>
             </DataGrid>
 

@@ -18,13 +18,16 @@ namespace BlackJackDomain.GameUtilities
             {
                 if (Cards?.Any() ?? false)
                 {
-                    int returnInt = 0;
+                    int AceIsOne = 0;
+                    int AceIsEleven = 0;
+                    // Ace = 1
                     foreach (Card card in Cards)
                     {
-                        returnInt += card.Value;
+                        AceIsOne += card.CardValue == PublicEnums.CardValue.Ace? 1: card.Value;
+                        AceIsEleven += card.CardValue == PublicEnums.CardValue.Ace ? 11 : card.Value;
                     }
 
-                    return returnInt;
+                    return AceIsEleven > 21 ? AceIsOne : AceIsEleven; // if ace is eleven and more than 21, -> more benefit to count as 1
                 }
                 return 0;
             }
