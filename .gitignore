@@ -3,3 +3,8 @@
 ################################################################################
 
 /.vs
+/BlackJackApplication/.vs/BlackJackApplication/v16
+/BlackJackApplication/bin/Debug/netcoreapp3.1
+/BlackJackApplication/obj
+/BlackJackDomain/bin/Debug/netcoreapp3.1
+/BlackJackDomain/obj
