@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using BlackJackDomain.GameUtilities;
 using static BlackJackDomain.GameUtilities.PublicEnums;
+using System.Linq;
 
 namespace BlackJackApplication
 {
@@ -112,7 +113,7 @@ namespace BlackJackApplication
                     winner = Turn.Dealer;
                 }
             }
-            _dealerCards.UpdateResult(winner);
+            _dealerCards.UpdateResult(winner, Game.GetDeck().Cards.Count(x => x.HasDealt == false));
         }
     }
 }

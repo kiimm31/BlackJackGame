@@ -50,12 +50,12 @@ namespace BlackJackApplication.CardDisplay
 
         }
 
-        public void UpdateResult(Turn Winner)
+        public void UpdateResult(Turn Winner, int cardsRemainding)
         {
             _dealer.Cards.ForEach((x) => x.IsHidden = false);
 
             OnLoad(true);
-
+            btnNewGame.ToolTip = $"Cards Remaining in Deck: {cardsRemainding}";
             switch (Winner)
             {
                 case Turn.Dealer:

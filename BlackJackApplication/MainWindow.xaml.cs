@@ -58,6 +58,26 @@ namespace BlackJackApplication
                     this.Content = mainGameInterface;
                 }
             }
+            else
+            {
+                MessageBox.Show("Please Check Name and Deck Count", "Error");
+            }
+        }
+        private void txtNumberOfDeck_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (!(e.Key == Key.D0 ||
+                e.Key == Key.D1 ||
+                e.Key == Key.D2 ||
+                e.Key == Key.D3 ||
+                e.Key == Key.D4 ||
+                e.Key == Key.D5 ||
+                e.Key == Key.D6 ||
+                e.Key == Key.D7 ||
+                e.Key == Key.D8 ||
+                e.Key == Key.D9))
+            {
+                e.Handled = true;
+            }
         }
     }
 }
