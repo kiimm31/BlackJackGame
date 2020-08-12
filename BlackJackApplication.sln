@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackJackApplication", "BlackJackApplication.csproj", "{0D931FE2-F98E-4C1B-9758-A2BA5ABFAA5E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackJackApplication", "BlackJackApplication\BlackJackApplication.csproj", "{0D931FE2-F98E-4C1B-9758-A2BA5ABFAA5E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackJackDomain", "..\BlackJackDomain\BlackJackDomain.csproj", "{8B35A51F-8641-4D3D-814C-E828AD42CE71}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackJackDomain", "BlackJackDomain\BlackJackDomain.csproj", "{8B35A51F-8641-4D3D-814C-E828AD42CE71}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
